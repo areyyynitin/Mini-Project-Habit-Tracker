@@ -19,7 +19,7 @@ def login_user(username, password):
         user_id = result[0]
     else:
         user_id = None
-    cursor.fetchall()  # Consume any remaining results
+    cursor.fetchall()  
     cursor.close()
     cnx.close()
     return user_id
