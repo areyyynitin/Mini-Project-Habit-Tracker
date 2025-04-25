@@ -1,0 +1,24 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE habits (
+    id INT AUTO_INCREMENT,
+    user_id INT,
+    habit_name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE habit_progress (
+    id INT AUTO_INCREMENT,
+    habit_id INT,
+    progress_date DATE,
+    progress_time TIME,
+    is_done BOOLEAN,
+    PRIMARY KEY (id),
+    FOREIGN KEY (habit_id) REFERENCES habits(id)
+);

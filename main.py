@@ -36,7 +36,7 @@ def main():
                         habits = get_user_habits(user_id)
                         if habits:
                             for habit in habits:
-                                print(f"\nHabit ID: {habit[0]}, Habit Name: {habit[1]}")
+                                print(f"Habit ID: {habit[0]}, Habit Name: {habit[1]}")
                         else:
                             print("\nNo habits found!\n")
                     elif habit_choice == "3":

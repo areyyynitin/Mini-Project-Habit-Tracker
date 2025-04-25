@@ -2,7 +2,7 @@ import mysql.connector
 
 config = {
     'user': 'root',
-    'password': 'Your password',
+    'password': 'nitin',
     'host': 'localhost',
     'database': 'habit_tracker'
 }
